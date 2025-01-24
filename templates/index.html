@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>単位計算システム</title>
+</head>
+<body>
+    <h1>単位計算システム</h1>
+    <form action="/calculate" method="post">
+        <h3>履修する教科を選択してください:</h3>
+        <table border="1">
+            <tr>
+                <th>教科</th>
+                <th>単位数</th>
+                <th>選択</th>
+            </tr>
+            {% for course, credits in courses.items() %}
+            <tr>
+                <td>{{ course }}</td>
+                <td>{{ credits }}</td>
+                <td><input type="checkbox" name="courses" value="{{ course }}"></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <button type="submit">計算</button>
+    </form>
+</body>
+</html>
+

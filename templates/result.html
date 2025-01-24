@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算結果</title>
+</head>
+<body>
+    <h1>計算結果</h1>
+    <p>選択した教科:</p>
+    <ul>
+        {% for course in selected_courses %}
+        <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+    <p>合計単位数: {{ total_credits }}</p>
+    <a href="/">戻る</a>
+</body>
+</html>
+
